@@ -17,6 +17,11 @@ class apiData extends Controller
         }
 
         $arra = '{
+            "messages":[
+                {
+                    "text": "me encanta"
+                }
+            ],
             "set_attributes":
             {
                "code": "'.$data[0]['id'].'"
