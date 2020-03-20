@@ -17,17 +17,18 @@ class apiData extends Controller
         }
 
         $arra = '{
-            "messages":[
-                {
-                    "text": "me encanta"
-                }
-            ],
+            
             "set_attributes":
             {
-               "code": "'.$data[0]['id'].'"
+               "code": "'.$data[0]['id'].'",
+               "carnet": "'.$data[0]['carnet'].'",
+               "nombre": "'.$data[0]['nombre'].'",
+               "apellido": "'.$data[0]['apellido'].'"
+
+
             }
         }';
-//        return response()->json($arra,200);
+//        return response()->json($data,200);
         return $arra;
     }
 }
