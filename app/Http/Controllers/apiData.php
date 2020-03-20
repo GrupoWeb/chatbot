@@ -21,6 +21,7 @@ class apiData extends Controller
                 '.$data.'
             }
         }';
-        return response()->json($array_data,200);
+//        return response()->json($arra,200);
+        return $arra;
     }
 }
