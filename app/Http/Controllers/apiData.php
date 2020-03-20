@@ -17,7 +17,8 @@ class apiData extends Controller
         }
 
         $arra = '{
-            "set_attributes": {
+            "set_attributes":
+            {
                "code": "'.$data[0]['id'].'"
             }
         }';
