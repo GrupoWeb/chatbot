@@ -64,4 +64,16 @@ class apiData extends Controller
         return response()->json('dato almacenado',200);
 
     }
+
+    public function asignar_semestre($carnet,$semestre_data){
+        $id_alumno = data_user::select('id')->where('carnet','=',$carnet)->get();
+        $id_alumno_data = $id_alumno[0]['id'];
+
+        $semestres = new semestre;
+        $semestres->id_alumno = $id_alumno_data;
+        $semestres->semestre = $semestre_data;
+        $semestres->save();
+
+        return response()->json('semestre asignado',200);
+    }
 }
