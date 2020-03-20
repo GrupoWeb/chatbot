@@ -53,4 +53,15 @@ class apiData extends Controller
 //        return response()->json($data,200);
         return $arra;
     }
+
+    public function add_alumno($carnet, $nombre,$apellido){
+        $data = new data_user;
+        $data->carnet = $carnet;
+        $data->nombre = $nombre;
+        $data->apellido = $apellido;
+        $data->save();
+
+        return response()->json('dato almacenado',200);
+
+    }
 }
