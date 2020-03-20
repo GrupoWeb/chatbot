@@ -11,7 +11,7 @@ class apiData extends Controller
         $data = data_user::all();
         foreach ($data as $row){
             $array_data[] = [
-                "message" => $row
+                "set_attributes" => $row
             ];
 
         }
@@ -21,6 +21,6 @@ class apiData extends Controller
                 '.$data.'
             }
         }';
-        return response()->json($arra,200);
+        return response()->json($array_data,200);
     }
 }
