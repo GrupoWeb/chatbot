@@ -18,7 +18,7 @@ class apiData extends Controller
 
         $arra = '{
             "set_attributes": {
-                '.$data.'
+               "code": "'.$data->id.'""
             }
         }';
 //        return response()->json($arra,200);
