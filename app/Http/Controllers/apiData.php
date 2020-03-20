@@ -76,4 +76,25 @@ class apiData extends Controller
 
         return response()->json('semestre asignado',200);
     }
+
+    public function pedir_usuario($carnet){
+        $alumno = data_user::select('nombre','apellido')->where('carnet','=',$carnet)->get();
+
+        $array = '{
+            "messages":[
+                {
+                    "text": ""
+                }
+            ],
+            "set_attributes":
+            {
+               "nombre_user": "'.$alumno[0]['nombre'].'",
+               "apellido_user": "'.$alumno[0]['apellido'].'"
+
+
+            }
+        }';
+
+        return $array;
+    }
 }
